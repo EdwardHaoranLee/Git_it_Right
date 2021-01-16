@@ -27,10 +27,7 @@ const MenuScreen = props =>{
 
   return (
     <View style={styles.screen}>
-      <Text> ~~ This is a Menu Screen ~~ </Text>
-      <Button 
-        title="Tap here to enter the This training session" 
-        onPress={() => props.navigation.navigate('Preview')}/> 
+
       <Text> ~~ This is a Menu Screen ~~ </Text>
       <View>
         <FlatList 
