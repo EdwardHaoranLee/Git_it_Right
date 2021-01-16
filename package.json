@@ -16,7 +16,9 @@
     "@tensorflow/tfjs": "^1.7.2",
     "@tensorflow/tfjs-react-native": "^0.2.3",
     "async-storage": "^0.1.0",
+    "compute-cosine-similarity": "^1.0.0",
     "expo": "^40.0.0",
+    "expo-av": "~8.7.0",
     "expo-camera": "~9.1.0",
     "expo-gl": "~9.2.0",
     "expo-gl-cpp": "~9.2.0",
@@ -32,8 +34,7 @@
     "react-native-svg": "12.1.0",
     "react-native-video": "^5.1.1",
     "react-native-web": "~0.13.12",
-    "react-native-webview": "11.0.0",
-    "expo-av": "~8.7.0"
+    "react-native-webview": "11.0.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
