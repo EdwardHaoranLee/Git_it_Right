@@ -8,7 +8,7 @@ import MenuScreen from './screens/MenuScreen';
 import TrainingPreviewScreen from './screens/TrainingPreviewScreen';
 import TrainingScreen from './screens/TrainingScreen';
 import TrainingResultScreen from './screens/TrainingResultScreen';
-import GCamera from "./model/Camera";
+import Posenet from "./model/PositionRecognizer";
 
 
 const Stack = createStackNavigator();
@@ -16,7 +16,7 @@ const Stack = createStackNavigator();
 function MainStackNavigator() {
   return (
     <NavigationContainer>
-      <GCamera/>
+      <Posenet/>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Menu" component={MenuScreen} />
