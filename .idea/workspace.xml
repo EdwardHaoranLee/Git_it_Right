@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb43505e-dbe6-40c0-a791-5fa5cdbbe464" name="Default Changelist" comment="Basic setup">
+    <list default="true" id="eb43505e-dbe6-40c0-a791-5fa5cdbbe464" name="Default Changelist" comment="Camera working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Camera.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/PositionRecognizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/utility/PositionRecognizer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/PositionRecognizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/utility/PositionRecognizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/utility" />
     </key>
   </component>
@@ -56,7 +56,7 @@
       <updated>1610770876683</updated>
       <workItem from="1610770881603" duration="13000" />
       <workItem from="1610770910500" duration="7893000" />
-      <workItem from="1610781017109" duration="1385000" />
+      <workItem from="1610781017109" duration="3954000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup">
       <created>1610776778710</created>
@@ -65,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610776778710</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Camera working">
+      <created>1610782452690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610782452690</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic setup" />
+    <MESSAGE value="Camera working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera working" />
   </component>
 </project>

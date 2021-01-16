@@ -12,7 +12,9 @@ export default async function getPositionData(image) {
         flipHorizontal: false,
         scoreThreshold: 0.6,
 
-    });
+    }).then((data) => {
+        console.log(data)
+    })
 
     return poses;
 }

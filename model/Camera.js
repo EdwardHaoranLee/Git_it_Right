@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
-import * as posenet from '@tensorflow-models/posenet'
+import getPositionData from '../utility/PositionRecognizer'
 
 
 export default function GCamera() {
@@ -11,30 +11,16 @@ export default function GCamera() {
 
     const takePicture = async () => {
         if (this.camera) {
-            const options = {quality: 1, base64: true};
+            const options = {quality: 1};
             const data = await this.camera.takePictureAsync(options);
-            console.log(data);
+            console.log(data.uri);
+            console.log("===")
+            await getPositionData(data)
+            console.log("===")
         } else {
             console.log("no")
         }
     };
-
-    async function getPositionData(image) {
-        const net = await posenet.load({
-            architecture: 'ResNet50',
-            outputStride: 32,
-            inputResolution: { width: 257, height: 200 },
-            quantBytes: 2
-        });
-
-        const poses = await net.estimateSinglePose(image, {
-            flipHorizontal: false,
-            scoreThreshold: 0.6,
-
-        });
-
-        return poses;
-    }
 
     useEffect(() => {
         (async () => {
