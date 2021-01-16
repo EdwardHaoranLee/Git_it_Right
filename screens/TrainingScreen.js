@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import {VIDEO_DATA} from '../data/videoData.js';
-
+import Posenet from "../model/PositionRecognizer";
 const TrainingScreen = props =>{
 
   const videoId = props.route.params.videoId
@@ -9,15 +9,19 @@ const TrainingScreen = props =>{
   
   return (
     <View style={styles.screen}>
-      <Text> {"TrainingPreview for: " + videoItem.name  }</Text>
+      <View style={styles.posenetView}>
+          {/* <Text>helllo</Text> */}
+          <Posenet/>
+      </View>
       <Button 
-        title="Tap here to enter the training" 
+        title="Tap here to end the training" 
         onPress={() => props.navigation.navigate({
           name:'Result',
           params:{videoId: videoId}
           })
         
         }/> 
+      <Text> {"TrainingPreview for: " + videoItem.name  }</Text>
 
     </View>)
 }
@@ -28,8 +32,13 @@ const styles = StyleSheet.create({
     flex:1,
     margin:10,
     alignItems: 'center',
-    justifyContent: 'center',
   },
+
+  posenetView:{
+    height:"90%",
+    width:"100%",
+    backgroundColor:"lightblue"
+  }
 
 });
 

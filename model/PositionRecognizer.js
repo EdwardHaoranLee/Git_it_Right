@@ -89,7 +89,7 @@ export default class Posenet extends Component {
                         resizeWidth={152}
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
-                        autorender={true}
+                        autorender={false}
                     />
                     <Skeleton pose={this.state.pose}/>
                 </View>
@@ -111,7 +111,8 @@ const styles = StyleSheet.create({
     },
     camera: {
         position: 'relative',
-        flex: 1,
+        // flex: 1,
+        height:0,   // do not display camera view
         justifyContent: 'flex-end',
         alignItems: 'center',
         zIndex:0
