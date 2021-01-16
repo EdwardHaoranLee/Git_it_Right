@@ -1,6 +1,6 @@
 const posenet = require('@tensorflow-models/posenet');
 
-async function getPositionData(image) {
+export default async function getPositionData(image) {
     const net = await posenet.load({
         architecture: 'ResNet50',
         outputStride: 32,
@@ -12,7 +12,9 @@ async function getPositionData(image) {
         flipHorizontal: false,
         scoreThreshold: 0.6,
 
-    });
+    }).then((data) => {
+        console.log(data)
+    })
 
     return poses;
 }

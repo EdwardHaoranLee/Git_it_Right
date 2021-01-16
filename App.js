@@ -8,6 +8,7 @@ import MenuScreen from './screens/MenuScreen';
 import TrainingPreviewScreen from './screens/TrainingPreviewScreen';
 import TrainingScreen from './screens/TrainingScreen';
 import TrainingResultScreen from './screens/TrainingResultScreen';
+import GCamera from "./model/Camera";
 
 
 const Stack = createStackNavigator();
@@ -15,6 +16,7 @@ const Stack = createStackNavigator();
 function MainStackNavigator() {
   return (
     <NavigationContainer>
+      <GCamera/>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Menu" component={MenuScreen} />
