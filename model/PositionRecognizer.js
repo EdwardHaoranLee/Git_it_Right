@@ -44,13 +44,14 @@ export default class Posenet extends Component {
     }
 
     handleCameraStream(images) {
-        var loop = async () => {
+        const loop = async () => {
             const nextImageTensor = images.next().value;
             if (this.mounted) {
                 //Apply posenet to nextImageTensor
                 let cameraFlip;
                 cameraFlip = Platform.OS !== 'ios';
                 let pose = await model.estimateSinglePose(nextImageTensor, {flipHorizontal: cameraFlip});
+                console.log(pose.score)
                 this.setState({pose: pose});
                 requestAnimationFrame(loop); //.bind(this);
             }
@@ -91,6 +92,9 @@ export default class Posenet extends Component {
                         onReady={this.handleCameraStream}
                         autorender={true}
                     />
+                    <View style={styles.canvas3}>
+
+                    </View>
                     <Skeleton pose={this.state.pose}/>
                 </View>
             );
@@ -128,5 +132,14 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         width: '100%'
-    }
+    },
+    canvas3: {
+        position: 'absolute',
+        zIndex: 10,
+        top:0,
+        bottom:0,
+        left:0,
+        right:0,
+        backgroundColor: "#000000"
+    },
 });
