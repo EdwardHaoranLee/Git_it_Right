@@ -16,7 +16,7 @@ function CatalogueByExercise(props) {
     <View style={styles.container}>
       <View style={styles.rectStack}>
         <View style={styles.rect}>
-          <View style={styles.iconRow}>
+          {/* <View style={styles.iconRow}>
             <EntypoIcon
               name="arrow-with-circle-left"
               style={styles.icon}
@@ -25,7 +25,7 @@ function CatalogueByExercise(props) {
               name="home-circle"
               style={styles.icon2}
             ></MaterialCommunityIconsIcon>
-          </View>
+          </View> */}
           <Text style={styles.exerciseCatalogue}>Exercise Catalogue</Text>
         </View>
         <View style={styles.scrollArea}>
@@ -302,7 +302,7 @@ const styles = StyleSheet.create({
     marginLeft: 177
   },
   scrollArea: {
-    top: 220,
+    top: 120,
     left: 92,
     width: 551,
     height: 698,

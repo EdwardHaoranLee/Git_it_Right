@@ -74,7 +74,7 @@ export default class TrainingScreen extends React.Component {
     return (
       <View style={styles.screen}>
         <View style={styles.posenetView}>
-            {/* <Posenet/> */}
+            <Posenet/>
         </View>
         <Button 
           title="Tap here to end the training" 
