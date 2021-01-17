@@ -42,7 +42,8 @@
     "react-navigation": "^4.0.10"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "canvas": "^2.6.1"
   },
   "private": true
 }
