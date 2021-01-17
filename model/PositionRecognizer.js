@@ -51,7 +51,7 @@ export default class Posenet extends Component {
                 let cameraFlip;
                 cameraFlip = Platform.OS !== 'ios';
                 let pose = await model.estimateSinglePose(nextImageTensor, {flipHorizontal: cameraFlip});
-                console.log(pose.score)
+                // console.log(pose.score)
                 this.setState({pose: pose});
                 requestAnimationFrame(loop); //.bind(this);
             }
@@ -141,6 +141,6 @@ const styles = StyleSheet.create({
         bottom:0,
         left:0,
         right:0,
-        backgroundColor: "#000000"
+        backgroundColor: "lightblue"
     },
 });

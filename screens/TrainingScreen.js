@@ -10,14 +10,17 @@ const TrainingScreen = props =>{
   return (
     <View style={styles.screen}>
       <View style={styles.posenetView}>
-          {/* <Text>helllo</Text> */}
           <Posenet/>
       </View>
       <Button 
         title="Tap here to end the training" 
         onPress={() => props.navigation.navigate({
           name:'Result',
-          params:{videoId: videoId}
+          params:{videoId: videoId,
+                  duration: 3,
+                  accuracy: 0.8,
+                  headAccuracy:0.5,
+                  shoulderAccuracy:0.5}
           })
         
         }/> 
