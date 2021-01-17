@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
-import MenuScreen from './screens/MenuScreen';
+// import MenuScreen from './screens/MenuScreen';
+import CatalogueByExercise from './screens/CatalogueByExercise';
 import TrainingPreviewScreen from './screens/TrainingPreviewScreen';
 import TrainingScreen from './screens/TrainingScreen';
 import TrainingResultScreen from './screens/TrainingResultScreen';
@@ -19,7 +20,8 @@ function MainStackNavigator() {
    
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Menu" component={MenuScreen} />
+        {/* <Stack.Screen name="Menu" component={MenuScreen} /> */}
+        <Stack.Screen name="Menu" component={CatalogueByExercise} />
         <Stack.Screen name="Preview" component={TrainingPreviewScreen} />
         <Stack.Screen name="Training" component={TrainingScreen} />
         <Stack.Screen name="Result" component={TrainingResultScreen} />
