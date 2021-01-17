@@ -24,18 +24,20 @@ function MainStackNavigator() {
     <NavigationContainer>
    
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Menu" component={MenuScreen} />
-        {/* <Stack.Screen name="Menu" component={CatalogueByExercise} /> */}
-        {/* <Stack.Screen name="Menu" component={CatalogueByMuscleGroups} /> */}
-        {/* <Stack.Screen name="Menu" component={Untitled} /> */}
-        {/* <Stack.Screen name="Menu" component={Untitled1} /> */}
-        {/* <Stack.Screen name="Menu" component={Untitled2} /> */}
-        {/* <Stack.Screen name="Menu" component={Untitled3} /> */}
+        <Stack.Screen name="Home" component={Untitled2} />
+        {/* <Stack.Screen name="Menu" component={MenuScreen} /> */}
+        
+        <Stack.Screen name="Menu" component={CatalogueByExercise} />
+        
+        
 
-        <Stack.Screen name="Preview" component={TrainingPreviewScreen} />
-        <Stack.Screen name="Training" component={TrainingScreen} />
-        <Stack.Screen name="Result" component={TrainingResultScreen} />
+
+        {/* <Stack.Screen name="Menu" component={CatalogueByMuscleGroups} /> */}
+        <Stack.Screen name="Preview" component={Untitled} />
+        
+        <Stack.Screen name="Training" component={TrainingScreen} /> 
+        {/* <Stack.Screen name="Training" component={Untitled3} />  */}
+        <Stack.Screen name="Result" component={Untitled3} />
       </Stack.Navigator>
     </NavigationContainer>
 

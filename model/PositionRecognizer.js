@@ -44,6 +44,7 @@ export default class Posenet extends Component {
     }
 
     handleCameraStream(images) {
+        console.log(typeof(images))
         const loop = async () => {
             const nextImageTensor = images.next().value;
             if (this.mounted) {
@@ -58,6 +59,7 @@ export default class Posenet extends Component {
         }
         loop();
     }
+
 
     render() {
         let textureDims;

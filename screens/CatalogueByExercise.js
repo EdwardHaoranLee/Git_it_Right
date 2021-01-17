@@ -5,27 +5,23 @@ import {
   Text,
   ScrollView,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Touchable
 } from "react-native";
-import EntypoIcon from "react-native-vector-icons/Entypo";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import Backbutton from "../components/Backbutton";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Svg, { Ellipse } from "react-native-svg";
+import Figure0 from "../components/Figure0";
 
 function CatalogueByExercise(props) {
   return (
     <View style={styles.container}>
       <View style={styles.rectStack}>
         <View style={styles.rect}>
-          {/* <View style={styles.iconRow}>
-            <EntypoIcon
-              name="arrow-with-circle-left"
-              style={styles.icon}
-            ></EntypoIcon>
-            <MaterialCommunityIconsIcon
-              name="home-circle"
-              style={styles.icon2}
-            ></MaterialCommunityIconsIcon>
-          </View> */}
+          <View style={styles.backbuttonRow}>
+            <Backbutton style={styles.backbutton}></Backbutton>
+            <Icon name="home-circle" style={styles.icon2}></Icon>
+          </View>
           <Text style={styles.exerciseCatalogue}>Exercise Catalogue</Text>
         </View>
         <View style={styles.scrollArea}>
@@ -35,10 +31,10 @@ function CatalogueByExercise(props) {
           >
             <View style={styles.rect2Stack}>
               <View style={styles.rect2}>
-                <View style={styles.group3StackRow}>
-                  <View style={styles.group3Stack}>
-                    <View style={styles.group3}>
-                      <View style={styles.ellipse4Stack}>
+                <View style={styles.rect3Row}>
+                  <View style={styles.rect3}>
+                    <View style={styles.ellipse4Stack}>
+                      <TouchableOpacity>
                         <Svg viewBox="0 0 150 150.27" style={styles.ellipse4}>
                           <Ellipse
                             stroke="rgba(230, 230, 230,1)"
@@ -50,26 +46,25 @@ function CatalogueByExercise(props) {
                             ry={75}
                           ></Ellipse>
                         </Svg>
-                        <Image
-                          source={require("../assets/images/IMG-2751.jpg")}
-                          resizeMode="contain"
-                          style={styles.image3}
-                        ></Image>
-                        <Svg viewBox="0 0 54.95 55.22" style={styles.ellipse10}>
-                          <Ellipse
-                            stroke="rgba(248,171,28,1)"
-                            strokeWidth={5}
-                            fill="rgba(255,255,255,1)"
-                            cx={27}
-                            cy={28}
-                            rx={25}
-                            ry={25}
-                          ></Ellipse>
-                        </Svg>
-                        <Text style={styles.loremIpsum}></Text>
-                      </View>
+                        <Figure0 style={styles.figure0}></Figure0>
+                      </TouchableOpacity>
+
+
+                      
+                      <Svg viewBox="0 0 54.95 55.22" style={styles.ellipse10}>
+                        <Ellipse
+                          stroke="rgba(248,171,28,1)"
+                          strokeWidth={5}
+                          fill="rgba(255,255,255,1)"
+                          cx={27}
+                          cy={28}
+                          rx={25}
+                          ry={25}
+                        ></Ellipse>
+                      </Svg>
+                      <Text style={styles.loremIpsum}></Text>
+                      <Text style={styles.loremIpsum2}>93%</Text>
                     </View>
-                    <Text style={styles.loremIpsum2}>93%</Text>
                   </View>
                   <View style={styles.group2Stack}>
                     <View style={styles.group2}>
@@ -90,9 +85,20 @@ function CatalogueByExercise(props) {
                           resizeMode="contain"
                           style={styles.image2}
                         ></Image>
+                        <Text style={styles.loremIpsum3}>87%</Text>
                       </View>
                     </View>
-                    <Text style={styles.loremIpsum3}>87%</Text>
+                    <Svg viewBox="0 0 54.95 55.22" style={styles.ellipse9}>
+                      <Ellipse
+                        stroke="rgba(248,171,28,1)"
+                        strokeWidth={5}
+                        fill="rgba(255,255,255,1)"
+                        cx={27}
+                        cy={28}
+                        rx={25}
+                        ry={25}
+                      ></Ellipse>
+                    </Svg>
                   </View>
                 </View>
                 <View style={styles.groupStackRow}>
@@ -100,22 +106,35 @@ function CatalogueByExercise(props) {
                     <View style={styles.group}>
                       <Text style={styles.loremIpsum6}>80%</Text>
                       <View style={styles.ellipse2Stack}>
-                        <Svg viewBox="0 0 150 150.27" style={styles.ellipse2}>
-                          <Ellipse
-                            stroke="rgba(230, 230, 230,1)"
-                            strokeWidth={0}
-                            fill="rgba(248,171,28,1)"
-                            cx={75}
-                            cy={75}
-                            rx={75}
-                            ry={75}
-                          ></Ellipse>
-                        </Svg>
-                        <Image
-                          source={require("../assets/images/IMG-2749.jpg")}
-                          resizeMode="contain"
-                          style={styles.image}
-                        ></Image>
+
+                        <TouchableOpacity
+                          onPress={() => props.navigation.navigate({
+                            name:'Preview',
+                            params:{videoId: 1}
+                            })
+                          
+                          }
+                        >
+                          <Svg viewBox="0 0 150 150.27" style={styles.ellipse2}>
+                            <Ellipse
+                              stroke="rgba(230, 230, 230,1)"
+                              strokeWidth={0}
+                              fill="rgba(248,171,28,1)"
+                              cx={75}
+                              cy={75}
+                              rx={75}
+                              ry={75}
+                            ></Ellipse>
+                          </Svg>
+                          <Image
+                            source={require("../assets/images/IMG-2749.jpg")}
+                            resizeMode="contain"
+                            style={styles.image}
+                          ></Image>
+
+                        </TouchableOpacity>
+
+
                         <Svg viewBox="0 0 54.95 55.22" style={styles.ellipse8}>
                           <Ellipse
                             stroke="rgba(248,171,28,1)"
@@ -227,7 +246,7 @@ function CatalogueByExercise(props) {
                   </View>
                 </View>
               </View>
-              <Svg viewBox="0 0 500 400" style={styles.ellipse}>
+              {/* <Svg viewBox="0 0 500 400" style={styles.ellipse}>
                 <Ellipse
                   stroke="rgba(230, 230, 230,1)"
                   strokeWidth={0}
@@ -237,22 +256,11 @@ function CatalogueByExercise(props) {
                   rx={250}
                   ry={200}
                 ></Ellipse>
-              </Svg>
-              <Text style={styles.byExercise}>By{"\n"}Exercise</Text>
+              </Svg> */}
+              {/* <Text style={styles.byExercise}>By{"\n"}Exercise</Text>
               <TouchableOpacity style={styles.button}>
                 <Text style={styles.byMuscleGrps}>By{"\n"}Muscle Grps</Text>
-              </TouchableOpacity>
-              <Svg viewBox="0 0 54.95 55.22" style={styles.ellipse9}>
-                <Ellipse
-                  stroke="rgba(248,171,28,1)"
-                  strokeWidth={5}
-                  fill="rgba(255,255,255,1)"
-                  cx={27}
-                  cy={28}
-                  rx={25}
-                  ry={25}
-                ></Ellipse>
-              </Svg>
+              </TouchableOpacity> */}
             </View>
           </ScrollView>
         </View>
@@ -274,9 +282,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(248,171,28,1)",
     borderRadius: 100
   },
-  icon: {
-    color: "rgba(255,255,255,1)",
-    fontSize: 40,
+  backbutton: {
     height: 44,
     width: 40
   },
@@ -285,25 +291,25 @@ const styles = StyleSheet.create({
     fontSize: 40,
     height: 44,
     width: 40,
-    marginLeft: 272
+    marginLeft: 293
   },
-  iconRow: {
+  backbuttonRow: {
     height: 44,
     flexDirection: "row",
     marginTop: 52,
-    marginLeft: 168,
-    marginRight: 136
+    marginLeft: 177,
+    marginRight: 106
   },
   exerciseCatalogue: {
     fontFamily: "montserrat-700",
     color: "rgba(255,255,255,1)",
     fontSize: 33,
-    marginTop: 27,
-    marginLeft: 177
+    marginTop: 36,
+    marginLeft: 198
   },
   scrollArea: {
-    top: 120,
-    left: 92,
+    top: 100,
+    left: 88,
     width: 551,
     height: 698,
     position: "absolute"
@@ -320,12 +326,10 @@ const styles = StyleSheet.create({
     position: "absolute",
     backgroundColor: "rgba(255,255,255,1)"
   },
-  group3: {
-    top: 0,
-    left: 0,
-    width: 150,
-    height: 150,
-    position: "absolute"
+  rect3: {
+    width: 158,
+    height: 145,
+    marginTop: 14
   },
   ellipse4: {
     top: 10,
@@ -334,12 +338,12 @@ const styles = StyleSheet.create({
     height: 150,
     position: "absolute"
   },
-  image3: {
+  figure0: {
+    position: "absolute",
     top: 29,
     left: 19,
-    width: 113,
     height: 115,
-    position: "absolute"
+    width: 113
   },
   ellipse10: {
     top: 0,
@@ -349,31 +353,27 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   loremIpsum: {
-    top: 26,
-    left: 136,
+    top: 11,
+    left: 125,
     position: "absolute",
     fontFamily: "roboto-regular",
     color: "#121212"
   },
-  ellipse4Stack: {
-    width: 166,
-    height: 160,
-    marginTop: -10
-  },
   loremIpsum2: {
-    top: 10,
+    top: 17,
     left: 123,
     position: "absolute",
     fontFamily: "montserrat-700",
     color: "rgba(248,171,28,1)",
     fontSize: 15
   },
-  group3Stack: {
-    width: 154,
-    height: 150
+  ellipse4Stack: {
+    width: 166,
+    height: 160,
+    marginTop: -10
   },
   group2: {
-    top: 0,
+    top: 9,
     left: 0,
     width: 150,
     height: 150,
@@ -393,30 +393,36 @@ const styles = StyleSheet.create({
     height: 106,
     position: "absolute"
   },
-  ellipse3Stack: {
-    width: 150,
-    height: 150
-  },
   loremIpsum3: {
-    top: 4,
-    left: 120,
+    top: 9,
+    left: 112,
     position: "absolute",
     fontFamily: "montserrat-700",
     color: "rgba(248,171,28,1)",
     fontSize: 15
   },
-  group2Stack: {
-    width: 153,
-    height: 150,
-    marginLeft: 47,
-    marginTop: 6
+  ellipse3Stack: {
+    width: 150,
+    height: 150
   },
-  group3StackRow: {
-    height: 156,
+  ellipse9: {
+    top: 0,
+    left: 97,
+    width: 55,
+    height: 55,
+    position: "absolute"
+  },
+  group2Stack: {
+    width: 152,
+    height: 159,
+    marginLeft: 57
+  },
+  rect3Row: {
+    height: 159,
     flexDirection: "row",
-    marginTop: 4,
-    marginLeft: 69,
-    marginRight: 123
+    marginTop: 5,
+    marginLeft: 84,
+    marginRight: 95
   },
   group: {
     left: 0,
@@ -459,22 +465,22 @@ const styles = StyleSheet.create({
     marginTop: 519
   },
   loremIpsum7: {
-    top: 4,
-    left: 121,
+    top: 3,
+    left: 124,
     position: "absolute",
     fontFamily: "montserrat-700",
     color: "rgba(248,171,28,1)",
     fontSize: 15
   },
   groupStack: {
-    width: 153,
+    width: 156,
     height: 150
   },
   group4: {
     width: 110,
     height: 115,
-    marginLeft: 68,
-    marginTop: 12
+    marginLeft: 76,
+    marginTop: 19
   },
   ellipse5: {
     top: 10,
@@ -514,19 +520,19 @@ const styles = StyleSheet.create({
   groupStackRow: {
     height: 150,
     flexDirection: "row",
-    marginTop: 63,
-    marginLeft: 71,
-    marginRight: 144
+    marginTop: 53,
+    marginLeft: 83,
+    marginRight: 121
   },
   ellipse6: {
-    top: 15,
+    top: 12,
     left: 0,
     width: 150,
     height: 150,
     position: "absolute"
   },
   image5: {
-    top: 27,
+    top: 24,
     left: 31,
     width: 90,
     height: 125,
@@ -534,22 +540,23 @@ const styles = StyleSheet.create({
   },
   ellipse12: {
     top: 0,
-    left: 112,
+    left: 103,
     width: 55,
     height: 55,
     position: "absolute"
   },
   loremIpsum8: {
-    top: 18,
-    left: 127,
+    top: 20,
+    left: 120,
     position: "absolute",
     fontFamily: "montserrat-700",
     color: "rgba(248,171,28,1)",
     fontSize: 15
   },
   ellipse6Stack: {
-    width: 167,
-    height: 165
+    width: 158,
+    height: 162,
+    marginTop: 7
   },
   ellipse7: {
     top: 15,
@@ -559,38 +566,38 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   image6: {
-    top: 31,
-    left: 22,
-    width: 102,
-    height: 117,
+    top: 35,
+    left: 30,
+    width: 98,
+    height: 104,
     position: "absolute"
   },
   ellipse13: {
     top: 0,
-    left: 104,
+    left: 93,
     width: 55,
     height: 55,
     position: "absolute"
   },
   loremIpsum9: {
-    top: 18,
-    left: 117,
+    top: 19,
+    left: 104,
     position: "absolute",
     fontFamily: "montserrat-700",
     color: "rgba(248,171,28,1)",
     fontSize: 15
   },
   ellipse7Stack: {
-    width: 159,
+    width: 150,
     height: 165,
-    marginLeft: 23
+    marginLeft: 54
   },
   ellipse6StackRow: {
-    height: 165,
+    height: 169,
     flexDirection: "row",
-    marginTop: 35,
-    marginLeft: 80,
-    marginRight: 117
+    marginTop: 37,
+    marginLeft: 84,
+    marginRight: 100
   },
   ellipse: {
     width: 500,
@@ -601,7 +608,7 @@ const styles = StyleSheet.create({
   },
   byExercise: {
     top: 17,
-    left: 114,
+    left: 118,
     position: "absolute",
     fontFamily: "montserrat-regular",
     color: "rgba(248,171,28,1)",
@@ -610,8 +617,8 @@ const styles = StyleSheet.create({
   },
   button: {
     top: 0,
-    left: 253,
-    width: 198,
+    left: 268,
+    width: 214,
     height: 91,
     position: "absolute",
     backgroundColor: "rgba(255,140,0,1)"
@@ -621,14 +628,7 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,1)",
     fontSize: 27,
     marginTop: 17,
-    marginLeft: 11
-  },
-  ellipse9: {
-    top: 109,
-    left: 379,
-    width: 55,
-    height: 55,
-    position: "absolute"
+    marginLeft: 20
   },
   rect2Stack: {
     width: 551,

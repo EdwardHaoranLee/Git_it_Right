@@ -79,8 +79,7 @@ export default class TrainingScreen extends React.Component {
         <Button 
           title="Tap here to end the training" 
           onPress={this.onFinishSession}/> 
-        <Text> {"TrainingPreview for: " + this.videoItem.name  }</Text>
-        <Button title="Press to hear some words" onPress={this.speak} />
+        {/* <Button title="Press to hear some words" onPress={this.speak} /> */}
       </View>)
 
   }

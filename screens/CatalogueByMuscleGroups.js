@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     width: 551,
     height: 698,
     marginTop: 208,
-    marginLeft: -64
+    marginLeft: -32
   },
   scrollArea1_contentContainerStyle: {
     height: 698,
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   },
   image: {
     top: 26,
-    left: 3,
+    left: 5,
     width: 131,
     height: 98,
     position: "absolute"
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   image2: {
-    top: 23,
+    top: 22,
     left: 19,
     width: 109,
     height: 102,
@@ -227,14 +227,14 @@ const styles = StyleSheet.create({
   ellipse3Stack: {
     width: 150,
     height: 150,
-    marginLeft: 32
+    marginLeft: 54
   },
   ellipse2StackRow: {
     height: 150,
     flexDirection: "row",
-    marginTop: 10,
-    marginLeft: 80,
-    marginRight: 134
+    marginTop: 9,
+    marginLeft: 63,
+    marginRight: 129
   },
   ellipse4: {
     top: 0,
@@ -252,7 +252,8 @@ const styles = StyleSheet.create({
   },
   ellipse4Stack: {
     width: 150,
-    height: 150
+    height: 150,
+    marginTop: 7
   },
   ellipse5: {
     top: 0,
@@ -262,7 +263,7 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   image4: {
-    top: 9,
+    top: 14,
     left: 17,
     width: 115,
     height: 137,
@@ -270,15 +271,15 @@ const styles = StyleSheet.create({
   },
   ellipse5Stack: {
     width: 150,
-    height: 150,
-    marginLeft: 31
+    height: 151,
+    marginLeft: 54
   },
   ellipse4StackRow: {
-    height: 150,
+    height: 157,
     flexDirection: "row",
-    marginTop: 51,
-    marginLeft: 81,
-    marginRight: 134
+    marginTop: 52,
+    marginLeft: 63,
+    marginRight: 129
   },
   ellipse6: {
     top: 0,
@@ -288,10 +289,10 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   image6: {
-    top: 16,
-    left: 14,
-    width: 119,
-    height: 124,
+    top: 15,
+    left: 16,
+    width: 113,
+    height: 120,
     position: "absolute"
   },
   ellipse6Stack: {
@@ -306,8 +307,8 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   image5: {
-    top: 0,
-    left: 19,
+    top: 12,
+    left: 24,
     width: 104,
     height: 126,
     position: "absolute"
@@ -315,14 +316,14 @@ const styles = StyleSheet.create({
   ellipse7Stack: {
     width: 150,
     height: 150,
-    marginLeft: 36
+    marginLeft: 52
   },
   ellipse6StackRow: {
     height: 150,
     flexDirection: "row",
-    marginTop: 55,
-    marginLeft: 83,
-    marginRight: 127
+    marginTop: 51,
+    marginLeft: 65,
+    marginRight: 129
   },
   ellipse1: {
     width: 500,
@@ -333,7 +334,7 @@ const styles = StyleSheet.create({
   },
   button1: {
     top: 0,
-    left: 55,
+    left: 23,
     width: 198,
     height: 91,
     position: "absolute",
@@ -349,7 +350,7 @@ const styles = StyleSheet.create({
   },
   byMuscleGrps: {
     top: 17,
-    left: 259,
+    left: 227,
     position: "absolute",
     fontFamily: "montserrat-regular",
     color: "rgba(248,171,28,1)",
@@ -367,14 +368,14 @@ const styles = StyleSheet.create({
   icon2: {
     color: "rgba(255,255,255,1)",
     fontSize: 40,
-    marginLeft: 272
+    marginLeft: 291
   },
   icon1Row: {
     height: 44,
     flexDirection: "row",
     marginTop: -866,
-    marginLeft: 12,
-    marginRight: 11
+    marginLeft: 22,
+    marginRight: 21
   },
   exerciseCatalogue1: {
     fontFamily: "montserrat-700",

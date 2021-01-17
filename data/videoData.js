@@ -1,8 +1,8 @@
 export const VIDEO_DATA = [
     {
         id: 1,
-        name: "Push Up",
-        assetFile:require('../assets/pushUpVideo.mp4'),
+        name: "Squat",
+        assetFile:require('../assets/squat-video.mp4'),
         assetType:"video"
     },
     // {

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image, ImageBackground } from "react-native";
+import { StyleSheet, View, Text, Image, ImageBackground,TouchableOpacity } from "react-native";
 import Svg, { Ellipse } from "react-native-svg";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import EntypoIcon from "react-native-vector-icons/Entypo";
+import Posenet from "../model/PositionRecognizer";
 
 function Untitled1(props) {
   return (
@@ -20,18 +21,7 @@ function Untitled1(props) {
               ry={150}
             ></Ellipse>
           </Svg>
-          <Svg viewBox="0 0 420 180" style={styles.ellipse4}>
-            <Ellipse
-              stroke="rgba(230, 230, 230,1)"
-              strokeWidth={0}
-              fill="rgba(255,255,255,1)"
-              cx={210}
-              cy={90}
-              rx={210}
-              ry={90}
-            ></Ellipse>
-          </Svg>
-          <Text style={styles.pushUp2}>Push-Up</Text>
+          <Text style={styles.pushUp2}>Squat</Text>
           <MaterialCommunityIconsIcon
             name="home-circle"
             style={styles.icon2}
@@ -65,52 +55,53 @@ function Untitled1(props) {
               ry={220}
             ></Ellipse>
           </Svg>
+
+          <View style={styles.posenetView}>
+            {/* <Posenet/> */}
+          </View>
+
+
           <ImageBackground
             source={require("../assets/images/IMG-2768.jpg")}
             resizeMode="contain"
             style={styles.image}
             imageStyle={styles.image_imageStyle}
           >
-            <Text style={styles.loremIpsum}></Text>
+            {/* <Posenet/> */}
+            {/* <Text style={styles.loremIpsum}></Text> */}
           </ImageBackground>
-          <Image
-            source={require("../assets/images/IMG-2765.jpg")}
-            resizeMode="contain"
-            style={styles.image2}
-          ></Image>
-          <Image
-            source={require("../assets/images/IMG-2766.jpg")}
-            resizeMode="contain"
-            style={styles.image3}
-          ></Image>
-          <Image
-            source={require("../assets/images/IMG-27671.jpg")}
-            resizeMode="contain"
-            style={styles.image4}
-          ></Image>
-          <Image
-            source={require("../assets/images/IMG-2764.jpg")}
-            resizeMode="contain"
-            style={styles.image5}
-          ></Image>
-          <Svg viewBox="0 0 139.75 143.75" style={styles.ellipse3}>
-            <Ellipse
-              stroke="rgba(255,255,255,1)"
-              strokeWidth={11}
-              fill="rgba(248,171,28,1)"
-              cx={70}
-              cy={72}
-              rx={64}
-              ry={66}
-            ></Ellipse>
-          </Svg>
-          <Image
-            source={require("../assets/images/IMG-2770.jpg")}
-            resizeMode="contain"
-            style={styles.image6}
-          ></Image>
+
+
+
+
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate({
+              name:'Result',
+              params:{videoId: 1}
+              })
+            
+            }
+          >
+            <Svg viewBox="0 0 139.75 143.75" style={styles.ellipse3}>
+              <Ellipse
+                stroke="rgba(255,255,255,1)"
+                strokeWidth={11}
+                fill="rgba(248,171,28,1)"
+                cx={70}
+                cy={72}
+                rx={64}
+                ry={66}
+              ></Ellipse>
+            </Svg>
+            <Image
+              source={require("../assets/images/IMG-2770.jpg")}
+              resizeMode="contain"
+              style={styles.image6}
+            ></Image>
+          </TouchableOpacity>
+
         </View>
-        <Text style={styles.gotItCount}>GotIt! Count:</Text>
+        <Text style={styles.gotItCount}>Training Time:</Text>
       </View>
     </View>
   );
@@ -122,51 +113,44 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(248,171,28,1)"
   },
   ellipse5: {
-    top: 80,
-    left: 0,
+    top: 0,
     width: 640,
     height: 300,
-    position: "absolute"
-  },
-  ellipse4: {
-    top: 0,
-    left: 69,
-    width: 420,
-    height: 180,
-    position: "absolute"
+    position: "absolute",
+    left: 0
   },
   pushUp2: {
-    top: 288,
-    left: 239,
+    top: 204,
+    left: 233,
     position: "absolute",
     fontFamily: "montserrat-700",
     color: "rgba(255,140,0,1)",
     fontSize: 35
   },
   icon2: {
-    top: 260,
-    left: 455,
+    top: 160,
+    left: 471,
     position: "absolute",
     color: "rgba(248,171,28,1)",
     fontSize: 40
   },
   icon1: {
-    top: 260,
-    left: 143,
+    top: 160,
+    left: 133,
     position: "absolute",
     color: "rgba(248,171,28,1)",
     fontSize: 40
   },
   ellipse6: {
-    top: 352,
-    left: 347,
+    top: 287,
+    left: 337,
     width: 156,
     height: 153,
     position: "absolute"
   },
   loremIpsum2: {
-    top: 386,
-    left: 376,
+    top: 320,
+    left: 369,
     position: "absolute",
     fontFamily: "roboto-700",
     color: "rgba(255,140,0,1)",
@@ -176,7 +160,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     width: 640,
-    height: 505,
+    height: 440,
     position: "absolute"
   },
   ellipse: {
@@ -187,71 +171,43 @@ const styles = StyleSheet.create({
     top: 0
   },
   image: {
-    top: 96,
-    left: 121,
-    width: 381,
-    height: 263,
+    top: 76,
+    left: 114,
+    width: 404,
+    height: 287,
     position: "absolute"
   },
   image_imageStyle: {},
   loremIpsum: {
     fontFamily: "roboto-regular",
     color: "#121212",
-    marginTop: 239,
-    marginLeft: 162
-  },
-  image2: {
-    top: 50,
-    left: 456,
-    width: 50,
-    height: 50,
-    position: "absolute"
-  },
-  image3: {
-    top: 352,
-    left: 131,
-    width: 50,
-    height: 48,
-    position: "absolute"
-  },
-  image4: {
-    top: 348,
-    left: 455,
-    width: 47,
-    height: 47,
-    position: "absolute"
-  },
-  image5: {
-    top: 46,
-    left: 127,
-    width: 50,
-    height: 50,
-    position: "absolute"
+    marginTop: 219,
+    marginLeft: 147
   },
   ellipse3: {
-    top: 360,
-    left: 243,
+    top: 356,
+    left: 249,
     width: 140,
     height: 144,
     position: "absolute"
   },
   image6: {
-    top: 393,
-    left: 283,
+    top: 389,
+    left: 289,
     width: 60,
     height: 78,
     position: "absolute"
   },
   ellipseStack: {
-    top: 480,
-    left: 0,
+    top: 420,
+    left: 4,
     width: 633,
-    height: 504,
+    height: 500,
     position: "absolute"
   },
   gotItCount: {
-    top: 420,
-    left: 171,
+    top: 355,
+    left: 142,
     position: "absolute",
     fontFamily: "montserrat-regular",
     color: "rgba(255,255,255,1)",
@@ -260,9 +216,15 @@ const styles = StyleSheet.create({
   },
   ellipse5StackStack: {
     width: 640,
-    height: 984,
-    marginTop: -220,
-    marginLeft: -131
+    height: 920,
+    marginTop: -120,
+    marginLeft: -113
+  },
+
+  posenetView:{
+    height:"60%",
+    width:"100%",
+    backgroundColor:"lightblue"
   }
 });
 
