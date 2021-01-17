@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import { StyleSheet, Text, View, Button, Image} from 'react-native';
 import {VIDEO_DATA} from '../data/videoData.js';
 import { Video } from 'expo-av';
 
@@ -12,16 +12,17 @@ const TrainingPreviewScreen = props =>{
   return (
     <View style={styles.screen}>
       <View style={styles.videoPreview}>
-        <Video
-          source={require('../assets/pushUpVideo.mp4' )}
+        {/* <Video
+          source={videoItem.assetFile}
           rate={1.0}
-          volume={1.0}
+          volume={0}
           isMuted={false}
           resizeMode="cover"
           shouldPlay
           isLooping
           style={{ width: "100%", height: "50%" }}
-        />
+        /> */}
+        <Image style={{ width: "100%", height: "50%" }} source={videoItem.assetFile} />
       </View>
       <Text>{"TrainingPreview for: " + videoItem.name   }</Text>
       <Button 
