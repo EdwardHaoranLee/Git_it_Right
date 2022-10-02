@@ -1,6 +1,6 @@
 # Git_it_Right
 
-This is a hackathon project initialized by Edward (Github: [EdwardHaoranLee](https://github.com/EdwardHaoranLee)), Jasmine (Github: [JasmineSun33](https://github.com/JasmineSun33)), Lotus (Github: [peiyulotusxie](https://github.com/peiyulotusxie)), and Richard (Github: [dis0hope](https://github.com/dis0hope)).
+This is a hackathon project initialized by Edward (Github: [EdwardHaoranLee](https://github.com/EdwardHaoranLee)), Jasmine (Github: [JasmineSun33](https://github.com/JasmineSun33)), Lotus (Github: [peiyulotusxie](https://github.com/peiyulotusxie)), and Richard (Github: [Xiaorui-Huang](https://github.com/xiaorui-Huang/)).
 
 This project, Git it Right, is started as the [group project](https://devpost.com/software/git-it-right-gc4d2n) of [Hack the North 2020](https://hackthenorth2020.devpost.com), hosted by University of Waterloo and sponsered by RBC. Within 36 hours, we designed and implemented a movement-recognization mobile app to encourage people exercise especially during this pandemic. The app allows people to monitor and correct their movement when doing simple exercise, such as push-up or squat, by comparing their movement with the preset motion data.
 
